@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>net452;net461</TargetFrameworks>
+    <PackageId>ss.Testing.xUnit.AutoMoq</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Jerahmeel Cosinas</Authors>
+    <Description>xUnit, AutoFixture and AutoMoq stack for declarative style testing.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>testing xunit moq autofixture</PackageTags>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AutoFixture.AutoMoq" Version="3.51.0" />
