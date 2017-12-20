@@ -10,11 +10,6 @@ dotnet_csproj:
   file: src\**\*.csproj
   package_version: '{version}'
   informational_version: '{version}'
-environment:
-  nuget-api-key:
-    secure: cdk1PHxgO0eToAllOUT1sqZdSDsjcOTTR2tNX9ro5+WwnFVIhPv/hUifBEzs4A2Q
-nuget:
-  account_feed: true
 build_script:
 - cmd: dotnet build -c release
 test_script:
