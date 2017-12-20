@@ -11,7 +11,7 @@ dotnet_csproj:
   package_version: '{version}'
   informational_version: '{version}'
 build_script:
-- cmd: dotnet build -c release && dotnet pack
+- cmd: dotnet build -c release
 test_script:
 - cmd: dotnet test
 deploy:
