@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net452;net461</TargetFrameworks>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ss.Testing.xUnit.AutoMoq\ss.Testing.xUnit.AutoMoq.csproj" />
+    <ProjectReference Include="..\..\src\ss.Testing.xUnit.AutoNSubstitute\ss.Testing.xUnit.AutoNSubstitute.csproj" />
+  </ItemGroup>
+
+</Project>

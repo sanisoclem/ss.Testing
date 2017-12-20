@@ -1,0 +1,9 @@
+image: Visual Studio 2017
+version: 1.0.{build}
+skip_branch_with_pr: true
+#build_script:
+#- cmd: dotnet build -c release && dotnet test ./tests/xtime.Core.Tests/xtime.Core.Tests.csproj
+#test:
+#  assemblies:
+#    only:
+#    - xtime.*Tests*.dll
