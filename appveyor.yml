@@ -11,7 +11,7 @@ dotnet_csproj:
   package_version: '{version}'
   informational_version: '{version}'
 build_script:
-- cmd: dotnet build -c release
+- cmd: dotnet build -c release && dotnet pack
 test_script:
 - cmd: dotnet test
 deploy:
@@ -28,3 +28,4 @@ deploy:
   skip_symbols: true
   on:
     branch: master
+    appveyor_repo_tag: false
