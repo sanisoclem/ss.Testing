@@ -17,6 +17,8 @@ nuget:
   account_feed: true
 build_script:
 - cmd: dotnet build -c release
+test_script:
+- cmd: dotnet test
 deploy:
 - provider: NuGet
   api_key:
