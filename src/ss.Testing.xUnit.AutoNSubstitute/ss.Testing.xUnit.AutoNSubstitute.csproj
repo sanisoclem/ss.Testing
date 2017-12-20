@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>net452;net461</TargetFrameworks>
+    <PackageId>ss.Testing.xUnit.AutoNSubstitute</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Jerahmeel Cosinas</Authors>
+    <Description>xUnit, AutoFixture and NSubstitute stack for declarative style testing.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>testing xunit nsubstitute ndata autofixture</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

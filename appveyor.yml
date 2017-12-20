@@ -1,9 +1,29 @@
-image: Visual Studio 2017
-version: 1.0.{build}
+version: 1.0.0-alpha{build}
 skip_branch_with_pr: true
-#build_script:
-#- cmd: dotnet build -c release && dotnet test ./tests/xtime.Core.Tests/xtime.Core.Tests.csproj
-#test:
-#  assemblies:
-#    only:
-#    - xtime.*Tests*.dll
+image: Visual Studio 2017
+configuration: Release
+init:
+- ps: $env:customnugetversion = if ($env:APPVEYOR_REPO_TAG -eq $True) { "$env:APPVEYOR_REPO_TAG_NAME" } else { "$env:APPVEYOR_BUILD_VERSION" }
+- ps: Update-AppveyorBuild -Version $env:customnugetversion
+dotnet_csproj:
+  patch: true
+  file: src\**\*.csproj
+  package_version: '{version}'
+  informational_version: '{version}'
+environment:
+  nuget-api-key:
+    secure: cdk1PHxgO0eToAllOUT1sqZdSDsjcOTTR2tNX9ro5+WwnFVIhPv/hUifBEzs4A2Q
+nuget:
+  account_feed: true
+build_script:
+- cmd: dotnet build -c release
+build:
+  publish_nuget: true
+  verbosity: normal
+deploy:
+- provider: NuGet
+  api_key:
+    secure: cdk1PHxgO0eToAllOUT1sqZdSDsjcOTTR2tNX9ro5+WwnFVIhPv/hUifBEzs4A2Q
+  skip_symbols: true
+  on:
+    appveyor_repo_tag: true
