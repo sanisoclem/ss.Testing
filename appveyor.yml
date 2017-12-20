@@ -23,7 +23,7 @@ deploy:
   skip_symbols: true
   on:
     appveyor_repo_tag: true
-    appveyor_repo_tag_name: /v.+/
+    appveyor_repo_tag_name: /\d+\.\d+.\d+(-[a-zA-Z0-9]+)?/
 - provider: NuGet
   server: https://ci.appveyor.com/nuget/sanisoclem-1hsskq6nn06g
   api_key:
